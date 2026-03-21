@@ -6,15 +6,13 @@ from loguru import logger
 from app.core.command_tree import CommandTree
 
 
-class appBot(commands.Bot):
+class MyBot(commands.Bot):
     def __init__(self) -> None:
         intents = discord.Intents.default()
         intents.message_content = True
         intents.members = True
         super().__init__(
-            command_prefix=commands.when_mentioned,
-            intents=intents,
-            tree_cls=CommandTree,
+            command_prefix=commands.when_mentioned, intents=intents, tree_cls=CommandTree
         )
 
     async def _load_cogs(self) -> None:
@@ -31,4 +29,3 @@ class appBot(commands.Bot):
 
     async def setup_hook(self) -> None:
         await self._load_cogs()
-        self.add_view(RoleTriggerView())
