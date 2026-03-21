@@ -7,6 +7,7 @@ requires-python = ">=3.14"
 dependencies = [
     "anyio>=4.12.1",
     "discord-py[speed]>=2.7.1",
+    "jishaku>=2.6.3",
     "loguru>=0.7.3",
     "pydantic-settings>=2.13.1",
     "python-dotenv>=1.2.2",
