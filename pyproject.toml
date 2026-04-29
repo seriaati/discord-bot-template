@@ -11,6 +11,7 @@ dependencies = [
     "loguru>=0.7.3",
     "pydantic-settings>=2.13.1",
     "python-dotenv>=1.2.2",
+    "tortoise-orm[asyncpg]>=1.1.7",
 ]
 
 [tool.pyright]
