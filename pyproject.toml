@@ -23,3 +23,6 @@ reportUnnecessaryContains = true
 reportUnnecessaryIsInstance = true
 reportUnnecessaryTypeIgnoreComment = true
 typeCheckingMode = "standard"
+
+[tool.tortoise]
+tortoise_orm = "app.db.conn.TORTOISE_ORM"
