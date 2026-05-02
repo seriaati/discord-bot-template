@@ -6,9 +6,9 @@ TORTOISE_ORM = {
     "connections": {"default": SETTINGS.database_url},
     "apps": {
         "models": {
-            "models": ["turtle_bot.db.models"],
+            "models": ["app.db.models"],
             "default_connection": "default",
-            "migrations": "app.db.migrations",
+            "migrations": "migrations",
         }
     },
     "use_tz": True,
