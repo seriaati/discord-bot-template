@@ -40,4 +40,4 @@ ENV PATH="/app/.venv/bin:$PATH" \
 
 USER botuser
 
-CMD ["python", "main.py"]
+CMD ["/app/entrypoint.sh"]
