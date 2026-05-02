@@ -19,7 +19,6 @@ TORTOISE_ORM = {
 class Database:
     async def connect(self) -> None:
         await Tortoise.init(TORTOISE_ORM)
-        await Tortoise.generate_schemas()
 
     async def close(self) -> None:
         await Tortoise.close_connections()
