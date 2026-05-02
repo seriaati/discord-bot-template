@@ -35,6 +35,9 @@ WORKDIR /app
 COPY --from=builder --chown=botuser:botuser /app/.venv /app/.venv
 COPY --from=builder --chown=botuser:botuser /app /app
 
+COPY --chown=botuser:botuser entrypoint.sh ./entrypoint.sh
+RUN chmod +x entrypoint.sh
+
 ENV PATH="/app/.venv/bin:$PATH" \
     PYTHONUNBUFFERED=1
 
